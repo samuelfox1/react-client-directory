@@ -1,38 +1,122 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(70, 70, 70);
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  text-align: center;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h6 {
+  margin-bottom: 0;
+}
+
+.client-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.client-card {
+  background-color: rgba(255, 255, 255, 0.254);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 15rem;
+  max-width: 15rem;
+  overflow-wrap: break-word;
+  box-shadow: 0 1px 32px 0 rgba(0, 0, 0, 0.405),
+    0 6px 20px 0 rgba(0, 0, 0, 0.803);
+}
+
+.client-image {
+  display: flex;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+.client-data-label {
+  margin-top: 1rem;
+  color: rgba(0, 0, 0, 0.809);
+  font-size: 10pt;
+}
+
+.client-data {
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+}
+
+a {
+  color: rgb(25, 49, 94);
+}
+
+.location-link {
+  color: rgb(228, 160, 108);
+}
+
+.delete-client {
+  font-family: inherit;
+  background-color: rgb(70, 70, 70);
+  color: rgb(255, 0, 0);
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+button {
+  border-radius: 0.5rem;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgb(199, 199, 199);
+}
+
+.location-data-top {
+  background-color: rgba(255, 255, 255, 0.254);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 80vw;
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+.location-data-bottom {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.location-image {
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  float: left;
+}
+
+.weather-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-item {
+  margin: 0;
+  padding: 0 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .location-data-container {
+    width: 15rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .location-image {
+    float: none;
+  }
+
+  .weather-item {
+    padding: 0;
   }
 }
