@@ -55,6 +55,10 @@ a {
   color: rgb(25, 49, 94);
 }
 
+a.repo {
+  color: red;
+}
+
 .location-link {
   color: rgb(228, 160, 108);
 }

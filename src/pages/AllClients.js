@@ -15,6 +15,7 @@ function AllClients({
       <main className="App">
         <h1>Client Directory</h1>
         <hr />
+        <p>Check out the <a href="https://github.com/samuelfox1/react-client-directory" className="repo" target="about_blank">repo</a> on GitHub</p>
         {/* component to search for users by name */}
         <SearchForm
           search={search}
