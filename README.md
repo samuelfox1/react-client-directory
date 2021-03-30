@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+======================= Client Requests ======================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Minimum Viable Product:
 
-## Available Scripts
+1. Build an SPA using at least 1 of the provided APIs beside user.js as a data source.
+2. Add to state.
+3. Remove from state.
+4. Use props (add component files).
+5. Create a search field that filters what is shown to the client.
+6. Doesn’t have to be beautiful, but if you have a good css idea you’re welcome to go for it!
 
-In the project directory, you can run:
+BONUS:
 
-### `npm start`
+1. Use 2 or more of the API files
+2. Add an additional API file.
+3. Feel free to add features and functionality (having a search bar is just the minimum requirement).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Submit:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Copy the link for your forked sandbox and submit it to techteam@clubwealth.com.
 
-### `npm test`
+========================= Application Workflow =======================
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. When a GET request is made to '/', an api GET request is made to "https://randomuser.me/api/?results=50" returning user data for 50 random clients.
 
-### `npm run build`
+2. The random clients are sorted alphabetically by first name and displayed to the page with data for:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   - profile picture
+   - first and last name
+   - country location in the form of a link
+   - email address in the form of a link to send an email to the client
+   - button to delete client
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. A search bar at the top allows a user to search for clients by first or last name.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. When a client's country link is selected, the page is redirected to '/:country' where the ':country' parameter is accessed and passed into 2 custom api requests to:
 
-### `npm run eject`
+   -"https://restcountries.eu/rest/v2/name/:country" returning general data for the country and saving to state.
+   -"https://api.openweathermap.org/data/2.5/weather?q=:country&units=imperial&appid=APIKEY" (APIKEY provided in code for this example, but sensitive keys should always be handled server side for security), returning general weather data for the country and saved to state.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. Country data is displayed to page as:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- image of flag
+- icon resembling current general weather
+- temperature in farenheight
+- wind speed in m.p.h.
+- Languagesd spoken in country
+- Capital City
+- Population
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+5. In addition to the country data, state for clientsByLocation is set, and state for displayedClients is updated to only hold clients from the same country.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+6. The search bar at the top of this page is the same as the home page, allowing a user to search clients from the same country by first or last name.
 
-## Learn More
+7. When the home button is clicked, the user is taken back to the main page, state for displayedClients is updated and all clients are displayed again.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+8. Anytime a client is deleted, state for clientData and displayedClients is updated to remove the client.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+9. Client data that a user interacts with will stay the same until page is refreshed, or a new GET request is made to '/' again.
 
-### Code Splitting
+10. Website is responsive with a mobile first approach to accomodate all screen sizes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Samuel Fox
 
-### Analyzing the Bundle Size
+- Portfolio - https://sjf-react-profile.herokuapp.com
+- GitHub - https://github.com/samuelfox1
+- LinkedIn - https://www.linkedin.com/in/samuel-fox-tacoma
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+March 2021
