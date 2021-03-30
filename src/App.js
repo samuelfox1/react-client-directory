@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import AllClients from "./Pages/AllClients";
 import Locations from "./Pages/Locations";
 import "./style.css";
-import user from "./APIs/user";
+import user from "./utils/APIs/user";
 
 function App() {
   const [search, setSearch] = useState(""); // search form inputs
