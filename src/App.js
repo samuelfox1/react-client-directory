@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import AllClients from "./Pages/AllClients";
-import Locations from "./Pages/Locations";
-import "./style.css";
+import AllClients from "./pages/AllClients";
+import Locations from "./pages/Location";
+import "./App.css";
 import user from "./utils/APIs/user";
 
 function App() {
