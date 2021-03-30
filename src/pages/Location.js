@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Redirect } from "react-router-dom";
 import ClientCard from "../components/ClientCard";
-import countries from "../APIs/countries";
-import weather from "../APIs/weather";
+import countries from "../utils/APIs/countries";
+import weather from "../utils/APIs/weather";
 import SearchForm from "../components/SearchForm";
 
 export default function ({
